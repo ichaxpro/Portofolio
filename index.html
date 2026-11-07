@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dewi Chalissa Rania | Portfolio</title>
+  <meta name="description" content="Portfolio Dewi Chalissa Rania - Mahasiswi Teknik Informatika Polinema, Machine Learning Enthusiast, Computer Vision Researcher, Full-Stack Web Developer.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgCream: '#F7F1E3',
+            surface: '#FFFFFF',
+            ink: '#143D2F',
+            inkSoft: '#4A6358',
+            inkDark: '#0E241C',
+            surfaceDark: '#16372B',
+            inkLight: '#F7F1E3',
+            inkLightSoft: '#B9C9BF',
+            accentGreen: '#2E9D63',
+            accentPink: '#FF5C8A',
+            accentYellow: '#FFD23F',
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'brutal-sm': '0 2px 0 0 #143D2F',
+            'brutal': '0 4px 0 0 #143D2F',
+            'brutal-lg': '0 6px 0 0 #143D2F',
+            'brutal-xl': '0 10px 0 0 #143D2F',
+            'brutal-dark': '0 4px 0 0 #F7F1E3',
+            'brutal-dark-lg': '0 6px 0 0 #F7F1E3',
+            'brutal-dark-xl': '0 10px 0 0 #F7F1E3',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bgCream text-ink dark:bg-inkDark dark:text-inkLight font-body text-base md:text-lg leading-relaxed selection:bg-accentPink selection:text-ink transition-colors duration-200">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside aria-label="Pengumuman" class="bg-ink text-bgCream dark:bg-inkDark dark:border-b dark:border-inkLight/20 text-xs sm:text-sm font-medium py-2.5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-center">
+      <span class="inline-flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-accentGreen animate-pulse"></span>
+        Terbuka untuk magang &amp; kolaborasi riset
+      </span>
+      <span class="hidden sm:inline opacity-40">•</span>
+      <span>📍 Malang, Indonesia</span>
+      <span class="hidden sm:inline opacity-40">•</span>
+      <span>🎓 Teknik Informatika · Polinema</span>
+    </div>
+  </aside>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-bgCream/95 dark:bg-inkDark/95 backdrop-blur-md border-b-2 border-ink dark:border-inkLight transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#top" class="flex items-center gap-2.5 font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight hover:opacity-90 transition-opacity">
+        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block shadow-sm"></span>
+        <span>Dewi Chalissa</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Navigasi Utama" class="hidden md:flex items-center gap-1 lg:gap-2">
+        <a href="#about" class="desktop-nav-link px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">About</a>
+        <a href="#projects" class="desktop-nav-link px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Projects</a>
+        <a href="#achievements" class="desktop-nav-link px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Prestasi</a>
+        <a href="#skills" class="desktop-nav-link px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Skills</a>
+        <a href="#experience" class="desktop-nav-link px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Experience</a>
+      </nav>
+
+      <!-- Right Controls: Theme Toggle & Mobile Menu -->
+      <div class="flex items-center gap-2.5">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" type="button" aria-label="Ganti mode gelap/terang" class="btn-brutal p-2 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm hover:shadow-brutal transition-all">
+          <span class="theme-icon-indicator flex items-center justify-center"></span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Buka navigasi mobile" class="md:hidden btn-brutal p-2 rounded-xl border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER (OVERLAY) -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-bgCream dark:bg-inkDark hidden flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between pb-6 border-b-2 border-ink dark:border-inkLight">
+      <div class="flex items-center gap-2.5 font-display font-extrabold text-xl uppercase">
+        <span class="w-6 h-6 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block"></span>
+        <span>Dewi Chalissa</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="themeToggleMobileBtn" type="button" aria-label="Ganti mode gelap/terang" class="btn-brutal p-2 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark">
+          <span class="theme-icon-indicator flex items-center justify-center"></span>
+        </button>
+        <button id="closeMobileMenuBtn" type="button" aria-label="Tutup menu" class="btn-brutal p-2 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="flex flex-col gap-4 py-8 text-2xl font-display font-extrabold uppercase">
+      <a href="#about" class="mobile-nav-link hover:text-accentPink transition-colors">About</a>
+      <a href="#projects" class="mobile-nav-link hover:text-accentPink transition-colors">Projects</a>
+      <a href="#achievements" class="mobile-nav-link hover:text-accentPink transition-colors">Prestasi</a>
+      <a href="#skills" class="mobile-nav-link hover:text-accentPink transition-colors">Skills</a>
+      <a href="#experience" class="mobile-nav-link hover:text-accentPink transition-colors">Experience</a>
+    </nav>
+
+    <div class="mt-auto pt-6 border-t-2 border-ink dark:border-inkLight text-sm font-bold text-inkSoft dark:text-inkLightSoft">
+      <p>Teknik Informatika · Politeknik Negeri Malang</p>
+      <p class="mt-1">dewiicha161@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    
+    <!-- HERO SECTION -->
+    <section id="top" class="pt-10 pb-16 sm:py-16 md:py-20 lg:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Intro & Info -->
+          <div class="lg:col-span-7">
+            <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface dark:bg-surfaceDark border-2 border-ink dark:border-inkLight text-xs sm:text-sm font-bold shadow-brutal-sm dark:shadow-brutal-dark mb-6">
+              👋 Halo, saya
+            </span>
+            
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-display font-extrabold uppercase tracking-tight leading-[0.95] text-ink dark:text-inkLight">
+              Dewi <span class="bg-accentYellow text-ink px-3 py-0.5 rounded-xl inline-block -rotate-1 shadow-sm">Chalissa</span> Rania
+            </h1>
+
+            <div class="flex flex-wrap gap-2.5 mt-6" aria-label="Peran">
+              <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1.5 font-bold text-xs sm:text-sm bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm dark:shadow-brutal-dark">
+                🤖 Machine Learning Enthusiast
+              </span>
+              <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1.5 font-bold text-xs sm:text-sm bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm dark:shadow-brutal-dark">
+                👁️ Computer Vision Researcher
+              </span>
+              <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1.5 font-bold text-xs sm:text-sm bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm dark:shadow-brutal-dark">
+                🌐 Full-Stack Web Developer
+              </span>
+            </div>
+
+            <p class="mt-6 text-lg sm:text-xl text-inkSoft dark:text-inkLightSoft max-w-xl leading-relaxed">
+              Mahasiswi Teknik Informatika Polinema yang aktif menghubungkan dunia AI/ML, riset robotik SAR, dan pengembangan aplikasi web berbasis komunitas.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a href="#projects" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm sm:text-base px-6 py-3.5 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-dark-lg">
+                View Projects →
+              </a>
+              <a id="cvBtn" href="mailto:dewiicha161@gmail.com" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm sm:text-base px-6 py-3.5 rounded-full border-2 border-ink dark:border-inkLight bg-accentYellow text-ink shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-dark-lg">
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Portrait -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96" aria-hidden="true">
+              <!-- Organic Blob Container -->
+              <div class="w-full h-full blob-shape bg-accentGreen border-3 border-ink dark:border-inkLight flex items-center justify-center relative overflow-hidden shadow-brutal-lg dark:shadow-brutal-dark-lg">
+                <img src="assets/images/foto_aku.png" alt="Foto Dewi Chalissa Rania" class="absolute inset-0 w-full h-full object-cover object-center">
+                <!-- Inner Overlapping Pink Decorative Circle -->
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-accentPink border-3 border-ink dark:border-inkLight"></div>
+              </div>
+
+              <!-- Sticker Badge 1 -->
+              <div class="absolute -left-4 top-4 bg-accentYellow text-ink border-2 border-ink rounded-full px-4 py-2 font-extrabold text-xs sm:text-sm -rotate-8 shadow-brutal transition-transform hover:rotate-0">
+                ⚡ YOLOv8 + OpenCV
+              </div>
+
+              <!-- Sticker Badge 2 -->
+              <div class="absolute -right-4 bottom-8 bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-extrabold text-xs sm:text-sm rotate-6 shadow-brutal dark:shadow-brutal-dark transition-transform hover:rotate-0">
+                🚀 Laravel 
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER BANNER -->
+    <section class="bg-ink dark:bg-inkDark text-bgCream border-y-2 border-ink dark:border-inkLight py-3.5 overflow-hidden select-none" aria-hidden="true">
+      <div id="marqueeTrack" class="animate-marquee">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          
+          <!-- Left: About Narrative -->
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <div>
+              <span class="font-bold text-xs uppercase tracking-widest text-inkSoft dark:text-inkLightSoft">About me</span>
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight mt-3 text-ink dark:text-inkLight">
+                Dari model ke aplikasi, dari arena ke komunitas
+              </h2>
+            </div>
+            <p class="text-lg text-inkSoft dark:text-inkLightSoft leading-relaxed">
+              Saya mahasiswi Teknik Informatika di Politeknik Negeri Malang. Di Polinema Robotics, saya meneliti computer vision agar robot SAR bisa mendeteksi korban dan rintangan secara real-time.
+            </p>
+            <p class="text-lg text-inkSoft dark:text-inkLightSoft leading-relaxed">
+              Di luar riset, saya membangun aplikasi web untuk komunitas dan memimpin divisi Training &amp; Development di ITDEC. Latar belakang sebagai atlet Contract Bridge nasional membuat saya terbiasa membaca situasi, menghitung risiko, dan bekerja sebagai tim.
+            </p>
+          </div>
+
+          <!-- Right: Pillars Cards -->
+          <div class="lg:col-span-6 flex flex-col gap-4">
+            
+            <!-- Pillar 1 -->
+            <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 flex items-start gap-5 shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-dark-lg transition-all">
+              <div class="w-12 h-12 rounded-full bg-accentGreen border-2 border-ink dark:border-inkLight flex items-center justify-center font-bold text-xl flex-shrink-0 text-ink">
+                ⚙
+              </div>
+              <div>
+                <h3 class="text-xl font-display font-extrabold text-ink dark:text-inkLight">Technical &amp; AI</h3>
+                <p class="text-inkSoft dark:text-inkLightSoft text-sm sm:text-base mt-1">
+                  Riset computer vision untuk robot SAR dan pengembangan model ML untuk aplikasi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 flex items-start gap-5 shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-dark-lg transition-all">
+              <div class="w-12 h-12 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight flex items-center justify-center font-bold text-xl flex-shrink-0 text-ink">
+                ★
+              </div>
+              <div>
+                <h3 class="text-xl font-display font-extrabold text-ink dark:text-inkLight">Leadership &amp; Community</h3>
+                <p class="text-inkSoft dark:text-inkLightSoft text-sm sm:text-base mt-1">
+                  Memimpin divisi Training &amp; Development di ITDEC, dari shadow hingga Head of Department.
+                </p>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 flex items-start gap-5 shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-lg dark:hover:shadow-brutal-dark-lg transition-all">
+              <div class="w-12 h-12 rounded-full bg-accentYellow border-2 border-ink dark:border-inkLight flex items-center justify-center font-bold text-xl flex-shrink-0 text-ink">
+                â™ 
+              </div>
+              <div>
+                <h3 class="text-xl font-display font-extrabold text-ink dark:text-inkLight">Problem Solving &amp; Analytical</h3>
+                <p class="text-inkSoft dark:text-inkLightSoft text-sm sm:text-base mt-1">
+                  Atlet Contract Bridge nasional dan pengembang solusi digital yang berangkat dari masalah nyata.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-16 sm:py-20 border-t-2 border-ink dark:border-inkLight/20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-col gap-2 max-w-2xl mb-8">
+          <span class="font-bold text-xs uppercase tracking-widest text-inkSoft dark:text-inkLightSoft">Featured projects</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight text-ink dark:text-inkLight">
+            Proyek unggulan
+          </h2>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap gap-2.5 mb-10" role="group" aria-label="Filter kategori proyek">
+          <button type="button" class="filter-chip btn-brutal font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-ink text-bgCream dark:bg-inkLight dark:text-inkDark shadow-brutal-sm" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button type="button" class="filter-chip btn-brutal font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-surface text-ink dark:bg-surfaceDark dark:text-inkLight shadow-brutal-sm" data-filter="ml" aria-pressed="false">
+            Machine Learning
+          </button>
+          <button type="button" class="filter-chip btn-brutal font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-surface text-ink dark:bg-surfaceDark dark:text-inkLight shadow-brutal-sm" data-filter="web" aria-pressed="false">
+            Web Development
+          </button>
+          <button type="button" class="filter-chip btn-brutal font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-surface text-ink dark:bg-surfaceDark dark:text-inkLight shadow-brutal-sm" data-filter="robotics" aria-pressed="false">
+            Robotics
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Project 1: SikatBosku! -->
+          <a href="pages/rijiki.html" class="project-card btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark overflow-hidden flex flex-col shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-xl dark:hover:shadow-brutal-dark-xl transition-all cursor-pointer group block" data-cat="ml">
+            <div class="aspect-[16/8] bg-white border-b-2 border-ink dark:border-inkLight relative flex items-center justify-center p-4">
+              <img src="assets/images/logo rijiikicare.png" alt="Logo Rijiki" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <span class="absolute right-3 bottom-3 text-xs font-bold bg-bgCream text-ink border-2 border-ink rounded-full px-3 py-0.5 shadow-sm">
+                UI / Arsitektur Model
+              </span>
+            </div>
+            <div class="p-6 flex flex-col gap-3 flex-1">
+              <div class="flex flex-wrap gap-2">
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-accentYellow text-ink">Machine Learning Coordinator</span>
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight">ML</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight group-hover:text-accentPink transition-colors flex items-center justify-between">
+                <span>Rijiki</span>
+                <span class="text-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </h3>
+              <p class="text-sm font-semibold text-inkSoft dark:text-inkLightSoft -mt-2">Smart Shoe Care &amp; Recommendation</p>
+              <ul class="list-disc pl-5 text-sm sm:text-base text-inkSoft dark:text-inkLightSoft space-y-1 my-2">
+                <li>Aturan anotasi dan persiapan dataset</li>
+                <li>Training dan evaluasi model</li>
+                <li>Rekomendasi perawatan sepatu berbasis ML</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-ink/10 dark:border-inkLight/10 flex items-center justify-between text-sm font-bold">
+                <span class="text-xs uppercase font-extrabold tracking-wider text-accentPink group-hover:underline inline-flex items-center gap-1">
+                  Lihat Detail Proyek ↗
+                </span>
+                <span class="text-xs text-inkSoft dark:text-inkLightSoft">Computer Vision</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 2: Robosarema SAR Robot -->
+          <a href="pages/robosarema.html" class="project-card btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark overflow-hidden flex flex-col shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-xl dark:hover:shadow-brutal-dark-xl transition-all cursor-pointer group block" data-cat="robotics ml">
+            <div class="aspect-[16/8] bg-accentPink border-b-2 border-ink dark:border-inkLight relative overflow-hidden">
+              <img src="assets/images/foto_robot.jpeg" alt="Foto robot Robosarema di arena" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <span class="absolute right-3 bottom-3 text-xs font-bold bg-bgCream text-ink border-2 border-ink rounded-full px-3 py-0.5 shadow-sm">
+                Foto Robot di Arena
+              </span>
+            </div>
+            <div class="p-6 flex flex-col gap-3 flex-1">
+              <div class="flex flex-wrap gap-2">
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-accentYellow text-ink">Software Division / Researcher</span>
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight">Robotics</span>
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight">Computer Vision</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight group-hover:text-accentPink transition-colors flex items-center justify-between">
+                <span>Robosarema SAR Robot</span>
+                <span class="text-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </h3>
+              <p class="text-sm font-semibold text-inkSoft dark:text-inkLightSoft -mt-2">Polinema Robotics</p>
+              <ul class="list-disc pl-5 text-sm sm:text-base text-inkSoft dark:text-inkLightSoft space-y-1 my-2">
+                <li>Deteksi korban dan rintangan secara real-time</li>
+                <li>Pipeline object detection kustom</li>
+                <li>Diagram alur data ML dari kamera ke keputusan robot</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-ink/10 dark:border-inkLight/10 flex items-center justify-between text-sm font-bold">
+                <span class="text-xs uppercase font-extrabold tracking-wider text-accentPink group-hover:underline inline-flex items-center gap-1">
+                  Lihat Detail Proyek ↗
+                </span>
+                <span class="text-xs text-inkSoft dark:text-inkLightSoft">KRSRI Robotics</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 3: Alinea -->
+          <a href="pages/alinea.html" class="project-card btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark overflow-hidden flex flex-col shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-xl dark:hover:shadow-brutal-dark-xl transition-all cursor-pointer group block" data-cat="web">
+            <div class="aspect-[16/8] bg-accentYellow border-b-2 border-ink dark:border-inkLight relative flex items-center justify-center p-4">
+              <video src="assets/videos/alinea_demo.mp4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" autoplay muted loop playsinline aria-label="Demo platform Alinea"></video>
+              <span class="absolute right-3 bottom-3 text-xs font-bold bg-bgCream text-ink border-2 border-ink rounded-full px-3 py-0.5 shadow-sm">
+                Chat &amp; Profil Komunitas
+              </span>
+            </div>
+            <div class="p-6 flex flex-col gap-3 flex-1">
+              <div class="flex flex-wrap gap-2">
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-accentYellow text-ink">Frontend &amp; Documentation</span>
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight">Web</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight group-hover:text-accentPink transition-colors flex items-center justify-between">
+                <span>Alinea</span>
+                <span class="text-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </h3>
+              <p class="text-sm font-semibold text-inkSoft dark:text-inkLightSoft -mt-2">Community Literacy Platform</p>
+              <ul class="list-disc pl-5 text-sm sm:text-base text-inkSoft dark:text-inkLightSoft space-y-1 my-2">
+                <li>Fitur interactive chat dan halaman profil</li>
+                <li>System activity diagram</li>
+                <li>User manual untuk pengguna komunitas</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-ink/10 dark:border-inkLight/10 flex items-center justify-between text-sm font-bold">
+                <span class="text-xs uppercase font-extrabold tracking-wider text-accentPink group-hover:underline inline-flex items-center gap-1">
+                  Lihat Detail Proyek ↗
+                </span>
+                <span class="text-xs text-inkSoft dark:text-inkLightSoft">Web App</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 4: Website Profil LAB DT Polinema -->
+          <a href="pages/lab-dt.html" class="project-card btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark overflow-hidden flex flex-col shadow-brutal dark:shadow-brutal-dark hover:shadow-brutal-xl dark:hover:shadow-brutal-dark-xl transition-all cursor-pointer group block" data-cat="web">
+            <div class="aspect-[16/8] bg-ink dark:bg-inkDark border-b-2 border-ink dark:border-inkLight relative flex items-center justify-center p-4">
+              <img src="assets/images/lab_dt.jpg" alt="Tampilan website profil LAB DT Polinema" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <span class="absolute right-3 bottom-3 text-xs font-bold bg-bgCream text-ink border-2 border-ink rounded-full px-3 py-0.5 shadow-sm">
+                Homepage Profil LAB
+              </span>
+            </div>
+            <div class="p-6 flex flex-col gap-3 flex-1">
+              <div class="flex flex-wrap gap-2">
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-accentYellow text-ink">Project Manager &amp; Developer</span>
+                <span class="border border-ink dark:border-inkLight rounded-full px-3 py-0.5 text-xs font-bold bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight">Web</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight group-hover:text-accentPink transition-colors flex items-center justify-between">
+                <span>Website Profil LAB DT Polinema</span>
+                <span class="text-xl opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </h3>
+              <p class="text-sm font-semibold text-inkSoft dark:text-inkLightSoft -mt-2">Company profile laboratorium</p>
+              <ul class="list-disc pl-5 text-sm sm:text-base text-inkSoft dark:text-inkLightSoft space-y-1 my-2">
+                <li>Manajemen timeline proyek</li>
+                <li>CRUD untuk Admin dan Member</li>
+                <li>Rancangan UI Homepage</li>
+              </ul>
+              <div class="mt-auto pt-4 border-t border-ink/10 dark:border-inkLight/10 flex items-center justify-between text-sm font-bold">
+                <span class="text-xs uppercase font-extrabold tracking-wider text-accentPink group-hover:underline inline-flex items-center gap-1">
+                  Lihat Detail Proyek ↗
+                </span>
+                <span class="text-xs text-inkSoft dark:text-inkLightSoft">Full-Stack Lab</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION (DARK BAND) -->
+    <section id="achievements" class="py-20 bg-ink dark:bg-surfaceDark text-bgCream border-y-2 border-ink dark:border-inkLight transition-colors">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col gap-2 max-w-2xl mb-12">
+          <span class="font-bold text-xs uppercase tracking-widest text-bgCream/70">Achievements &amp; competitions</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight text-bgCream">
+            Prestasi &amp; lomba
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Achievement 1 -->
+          <a href="pages/prestasi-robotics.html" class="btn-brutal border-2 border-bgCream rounded-2xl p-7 flex flex-col gap-4 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 rounded-full bg-accentGreen border-2 border-bgCream flex items-center justify-center text-2xl text-ink">
+              🤖
+            </div>
+            <h3 class="text-2xl font-display font-extrabold text-bgCream">Unlimited UNDIP 2026</h3>
+            <p class="text-sm sm:text-base opacity-85 leading-relaxed">
+              Riset dan kompetisi Robot SAR (KRSRI) bersama Polinema Robotics, dengan fokus deteksi korban dan rintangan.
+            </p>
+            <div class="mt-auto pt-4 border-t-2 border-dashed border-bgCream/40 text-xs sm:text-sm font-medium">
+              <span class="text-accentYellow font-extrabold">Isi:</span> 2026, TOP 4 Kategori Robot SAR.
+            </div>
+          </a>
+
+          <!-- Achievement 2 -->
+          <a href="pages/prestasi-business-plan.html" class="btn-brutal border-2 border-bgCream rounded-2xl p-7 flex flex-col gap-4 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 rounded-full bg-accentYellow border-2 border-bgCream flex items-center justify-center text-2xl text-ink">
+              💡
+            </div>
+            <h3 class="text-2xl font-display font-extrabold text-bgCream">IMTERCOMPT Bussiness Plan</h3>
+            <p class="text-sm sm:text-base opacity-85 leading-relaxed">
+              Kompetisi business plan yang melatih pemahaman produk, alur bisnis, pitching, dan kepemimpinan proyek.
+            </p>
+            <div class="mt-auto pt-4 border-t-2 border-dashed border-bgCream/40 text-xs sm:text-sm font-medium">
+              <span class="text-accentYellow font-extrabold">Isi:</span> 2026, 3rd Place Category Bussiness Plan.
+            </div>
+          </a>
+
+          <!-- Achievement 3 -->
+          <a href="pages/prestasi-contract-bridge.html" class="btn-brutal border-2 border-bgCream rounded-2xl p-7 flex flex-col gap-4 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-1 transition-all">
+            <div class="w-14 h-14 rounded-full bg-accentPink border-2 border-bgCream flex items-center justify-center text-2xl text-ink">
+              â™ 
+            </div>
+            <h3 class="text-2xl font-display font-extrabold text-bgCream">PORSENI XV Kategori Bridge</h3>
+            <p class="text-sm sm:text-base opacity-85 leading-relaxed">
+              Turnamen tingkat nasional dan menjadi perwakilan Politeknik Negeri Malang dalam PORSENI XV.
+            </p>
+            <div class="mt-auto pt-4 border-t-2 border-dashed border-bgCream/40 text-xs sm:text-sm font-medium">
+              <span class="text-accentYellow font-extrabold">Isi:</span> 2026, 2nd Place PORSENI XV Bridge Competition category woman pair.
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col gap-2 max-w-2xl mb-12">
+          <span class="font-bold text-xs uppercase tracking-widest text-inkSoft dark:text-inkLightSoft">Skills &amp; tools</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight text-ink dark:text-inkLight">
+            Yang saya pakai sehari-hari
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Skill Card 1: Machine Learning & AI -->
+          <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <h3 class="text-xl sm:text-2xl font-display font-extrabold text-ink dark:text-inkLight flex items-center gap-3 mb-5">
+              <span class="w-4 h-4 rounded-full bg-accentGreen border-2 border-ink dark:border-inkLight inline-block"></span>
+              Machine Learning &amp; AI
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Python</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">OpenCV</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">PyTorch</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">YOLOv8</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Model Training</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Object Detection</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Data Annotation</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Web Development -->
+          <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <h3 class="text-xl sm:text-2xl font-display font-extrabold text-ink dark:text-inkLight flex items-center gap-3 mb-5">
+              <span class="w-4 h-4 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block"></span>
+              Web Development
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Laravel</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Livewire</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Tailwind CSS</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Vue / React</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">JavaScript</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">HTML / CSS</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">MySQL / PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Tools & Workflow -->
+          <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <h3 class="text-xl sm:text-2xl font-display font-extrabold text-ink dark:text-inkLight flex items-center gap-3 mb-5">
+              <span class="w-4 h-4 rounded-full bg-accentYellow border-2 border-ink dark:border-inkLight inline-block"></span>
+              Tools &amp; Workflow
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Git</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Figma</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">VS Code</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Google Colab</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Anaconda</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Laragon</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Soft Skills -->
+          <div class="btn-brutal border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <h3 class="text-xl sm:text-2xl font-display font-extrabold text-ink dark:text-inkLight flex items-center gap-3 mb-5">
+              <span class="w-4 h-4 rounded-full bg-ink dark:bg-inkLight border-2 border-ink dark:border-inkLight inline-block"></span>
+              Soft Skills
+            </h3>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Department Leadership</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Project Management</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Event Organization</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Strategic Bidding</span>
+              <span class="border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-sm">Analytical Thinking</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / TIMELINE SECTION -->
+    <section id="experience" class="py-16 sm:py-20 border-t-2 border-ink dark:border-inkLight/20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col gap-2 max-w-2xl mb-12">
+          <span class="font-bold text-xs uppercase tracking-widest text-inkSoft dark:text-inkLightSoft">Experience &amp; leadership</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight text-ink dark:text-inkLight">
+            Perjalanan organisasi
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- ITDEC -->
+          <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-12 h-12 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight flex items-center justify-center text-xl">🎓</span>
+              <div>
+                <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight">ITDEC</h3>
+                <p class="text-sm font-bold text-inkSoft dark:text-inkLightSoft">Training &amp; Development</p>
+              </div>
+            </div>
+            <div class="space-y-6 border-l-2 border-ink/20 dark:border-inkLight/20 pl-5">
+              <div>
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-inkSoft dark:text-inkLightSoft">2026 – Sekarang</span>
+                <h4 class="text-lg sm:text-xl font-display font-extrabold text-ink dark:text-inkLight mt-1">Head of Department Training &amp; Development</h4>
+                <span class="inline-block mt-2 bg-accentPink text-ink text-xs font-black uppercase px-2.5 py-0.5 rounded-full border-2 border-ink tracking-wider">Kini</span>
+              </div>
+              <div>
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-inkSoft dark:text-inkLightSoft">2025 – 2026</span>
+                <h4 class="text-lg sm:text-xl font-display font-extrabold text-ink dark:text-inkLight mt-1">Shadow of Department T&amp;D</h4>
+              </div>
+            </div>
+          </article>
+
+          <!-- Polinema Robotics -->
+          <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-12 h-12 rounded-full bg-accentGreen border-2 border-ink dark:border-inkLight flex items-center justify-center text-xl">🤖</span>
+              <div>
+                <h3 class="text-2xl font-display font-extrabold text-ink dark:text-inkLight">Polinema Robotics</h3>
+                <p class="text-sm font-bold text-inkSoft dark:text-inkLightSoft">Research &amp; Software Division</p>
+              </div>
+            </div>
+            <div class="border-l-2 border-ink/20 dark:border-inkLight/20 pl-5">
+              <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-inkSoft dark:text-inkLightSoft">2024 – Sekarang</span>
+              <h4 class="text-lg sm:text-xl font-display font-extrabold text-ink dark:text-inkLight mt-1">Software Division Researcher</h4>
+              <span class="inline-block mt-2 bg-accentGreen text-ink text-xs font-black uppercase px-2.5 py-0.5 rounded-full border-2 border-ink tracking-wider">Kini</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink dark:bg-inkDark text-bgCream border-t-2 border-ink dark:border-inkLight pt-16 pb-12 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+        
+        <!-- Col 1: Big Typography Brand -->
+        <div class="lg:col-span-4">
+          <p class="font-display font-black text-4xl sm:text-5xl uppercase leading-[0.95] tracking-tight">
+            Dewi<br>Chalissa<br>Rania
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-extrabold uppercase text-base tracking-wider mb-4 text-accentYellow">Portofolio</h4>
+          <ul class="space-y-2 text-sm font-medium opacity-85">
+            <li><a href="#about" class="hover:underline hover:opacity-100">About</a></li>
+            <li><a href="#projects" class="hover:underline hover:opacity-100">Projects</a></li>
+            <li><a href="#achievements" class="hover:underline hover:opacity-100">Prestasi</a></li>
+            <li><a href="#skills" class="hover:underline hover:opacity-100">Skills</a></li>
+            <li><a href="#experience" class="hover:underline hover:opacity-100">Experience</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Focus Areas -->
+        <div class="lg:col-span-2">
+          <h4 class="font-display font-extrabold uppercase text-base tracking-wider mb-4 text-accentPink">Fokus</h4>
+          <ul class="space-y-2 text-sm font-medium opacity-85">
+            <li>Machine Learning</li>
+            <li>Computer Vision</li>
+            <li>Web Development</li>
+            <li>Contract Bridge</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Terhubung / Connect -->
+        <div class="lg:col-span-3">
+          <h4 class="font-display font-extrabold uppercase text-base tracking-wider mb-4 text-accentGreen">Terhubung</h4>
+          <ul class="space-y-2 text-sm font-medium opacity-85">
+            <li><a href="https://linkedin.com/in/dewi-chalissa-01621a329/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:opacity-100">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/ichaxpro" target="_blank" rel="noopener noreferrer" class="hover:underline hover:opacity-100">GitHub ↗</a></li>
+            <li><span class="break-all">dewiicha161@gmail.com</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="mt-12 pt-8 border-t border-bgCream/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-medium opacity-75">
+        <p>© 2026 Dewi Chalissa Rania · Teknik Informatika, Politeknik Negeri Malang</p>
+        <p class="flex items-center gap-1">Built with HTML5, Tailwind CSS &amp; Vanilla JS</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

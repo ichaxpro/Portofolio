@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Website Profil LAB DT · Detail Proyek | Dewi Chalissa Rania</title>
+  <meta name="description" content="Detail Proyek Website Profil LAB DT Polinema - Company Profile & Sistem Manajemen Laboratorium oleh Dewi Chalissa Rania.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgCream: '#F7F1E3',
+            surface: '#FFFFFF',
+            ink: '#143D2F',
+            inkSoft: '#4A6358',
+            inkDark: '#0E241C',
+            surfaceDark: '#16372B',
+            inkLight: '#F7F1E3',
+            inkLightSoft: '#B9C9BF',
+            accentGreen: '#2E9D63',
+            accentPink: '#FF5C8A',
+            accentYellow: '#FFD23F',
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'brutal-sm': '0 2px 0 0 #143D2F',
+            'brutal': '0 4px 0 0 #143D2F',
+            'brutal-lg': '0 6px 0 0 #143D2F',
+            'brutal-xl': '0 10px 0 0 #143D2F',
+            'brutal-dark': '0 4px 0 0 #F7F1E3',
+            'brutal-dark-lg': '0 6px 0 0 #F7F1E3',
+            'brutal-dark-xl': '0 10px 0 0 #F7F1E3',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-bgCream text-ink dark:bg-inkDark dark:text-inkLight font-body text-base md:text-lg leading-relaxed selection:bg-accentPink selection:text-ink transition-colors duration-200">
+
+  <!-- TOP BAR -->
+  <aside aria-label="Pengumuman" class="bg-ink text-bgCream dark:bg-inkDark dark:border-b dark:border-inkLight/20 text-xs sm:text-sm font-medium py-2.5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <a href="../index.html" class="inline-flex items-center gap-2 font-bold hover:text-accentYellow transition-colors">
+        <span>← Kembali ke Portofolio Utama</span>
+      </a>
+      <span class="text-xs opacity-75">Sistem Informasi &amp; Profil Laboratorium</span>
+    </div>
+  </aside>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-bgCream/95 dark:bg-inkDark/95 backdrop-blur-md border-b-2 border-ink dark:border-inkLight transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center gap-2.5 font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight hover:opacity-90 transition-opacity">
+        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block shadow-sm"></span>
+        <span>Dewi Chalissa</span>
+      </a>
+
+      <!-- Quick Links -->
+      <nav class="hidden md:flex items-center gap-2">
+        <a href="../index.html#about" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">About</a>
+        <a href="../index.html#projects" class="px-3.5 py-1.5 rounded-full font-bold text-sm bg-accentYellow text-ink transition-colors">Projects</a>
+        <a href="../index.html#achievements" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Prestasi</a>
+        <a href="../index.html#skills" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Skills</a>
+        <a href="../index.html#experience" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Experience</a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" type="button" aria-label="Ganti mode gelap/terang" class="btn-brutal p-2 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm hover:shadow-brutal transition-all">
+          <span class="theme-icon-indicator flex items-center justify-center"></span>
+        </button>
+        <a href="../index.html#projects" class="btn-brutal hidden sm:inline-flex items-center gap-1.5 text-xs font-extrabold uppercase px-4 py-2 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal-sm">
+          Semua Proyek
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PROJECT DETAIL CONTENT -->
+  <main class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <div class="flex items-center gap-2 text-sm font-bold text-inkSoft dark:text-inkLightSoft mb-8">
+        <a href="../index.html" class="hover:underline">Beranda</a>
+        <span>/</span>
+        <a href="../index.html#projects" class="hover:underline">Proyek</a>
+        <span>/</span>
+        <span class="text-ink dark:text-inkLight font-extrabold">Website Profil LAB DT Polinema</span>
+      </div>
+
+      <!-- Project Header Card -->
+      <section class="border-2 border-ink dark:border-inkLight rounded-3xl bg-surface dark:bg-surfaceDark p-6 sm:p-10 shadow-brutal-lg dark:shadow-brutal-dark-lg mb-10">
+        
+        <div class="flex flex-wrap items-center gap-2.5 mb-4">
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-1 font-bold text-xs sm:text-sm bg-accentYellow text-ink shadow-brutal-sm">
+            ⭐ Project Manager &amp; Developer
+          </span>
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1 font-bold text-xs sm:text-sm bg-accentGreen text-bgCream shadow-brutal-sm">
+            Full-Stack Web Application
+          </span>
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1 font-bold text-xs sm:text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-brutal-sm">
+            Company Profile Lab
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold uppercase tracking-tight text-ink dark:text-inkLight leading-[1.08]">
+          Website Profil LAB DT Polinema
+        </h1>
+        <p class="text-xl sm:text-2xl font-bold text-inkSoft dark:text-inkLightSoft mt-2">
+          Laboratorium Desain &amp; Teknologi · Politeknik Negeri Malang
+        </p>
+
+        <!-- Visual Hero Illustration -->
+        <div class="mt-8 rounded-2xl overflow-hidden border-2 border-ink dark:border-inkLight bg-ink dark:bg-inkDark aspect-[16/8] relative shadow-brutal">
+          <img src="../assets/images/lab_dt.jpg" alt="Tampilan website profil LAB DT Polinema" class="w-full h-full object-cover">
+          <div class="absolute bottom-4 right-4 bg-bgCream text-ink border-2 border-ink rounded-full px-4 py-1 text-xs font-bold shadow-sm">
+            Homepage &amp; Dashboard Manajemen Lab
+          </div>
+        </div>
+
+        <!-- Links Action Bar -->
+        <div class="mt-6 pt-6 border-t-2 border-ink/10 dark:border-inkLight/10 flex flex-wrap gap-4 items-center justify-between">
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/ichaxpro/pbl1" target="_blank" rel="noopener noreferrer" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal-sm">
+              <span>Repository GitHub ↗</span>
+            </a>
+          </div>
+          <div class="text-xs font-bold text-inkSoft dark:text-inkLightSoft">
+            Politeknik Negeri Malang
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Project Details Grid -->
+      <div class="space-y-8">
+        
+        <!-- Section 1: Ringkasan & Kebutuhan Proyek -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentGreen border-2 border-ink dark:border-inkLight inline-block"></span>
+            Tentang Website Profil LAB DT
+          </h2>
+          <p class="text-inkSoft dark:text-inkLightSoft text-base sm:text-lg leading-relaxed mb-4">
+            Laboratorium Desain &amp; Teknologi (LAB DT) di Politeknik Negeri Malang membutuhkan platform digital representatif untuk mempublikasikan kegiatan riset, profil pengajar/anggota lab, inventaris perlengkapan canggih, serta portofolio karya inovasi mahasiswa.
+          </p>
+          <p class="text-inkSoft dark:text-inkLightSoft text-base sm:text-lg leading-relaxed">
+            Dalam proyek ini, saya memegang dua peran kunci: sebagai <strong>Project Manager</strong> yang memimpin jalannya tahapan rekayasa perangkat lunak, sekaligus sebagai <strong>Full-Stack Developer</strong> yang mengimplementasikan arsitektur database, sistem CRUD, dan desain antarmuka.
+          </p>
+        </article>
+
+        <!-- Section 2: Kontribusi & Fitur Unggulan -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentYellow border-2 border-ink dark:border-inkLight inline-block"></span>
+            Peran &amp; Fitur Unggulan
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">📅</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">Manajemen Timeline &amp; Sprint</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Menyusun timeline pengembangan, alokasi tugas tim, review mingguan, dan memastikan delivery fitur tepat waktu sesuai spesifikasi stakeholder.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">🔐</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">CRUD Admin &amp; Member</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Mengembangkan modul pengelolaan data dinamis (berita, galeri riset, inventaris, dan akun member) dengan otentikasi role-based yang aman.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">🎨</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">Rancangan UI Homepage Modern</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Mendesain tampilan antarmuka berkesan teknologi tinggi dan bersih, menampilkan showcase riset unggulan dengan navigasi yang responsif.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">🗄️</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">Arsitektur Database Relasional</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Merancang skema database MySQL teroptimasi dengan relasi antarentitas yang efisien dan query yang terhindar dari bottleneck performa.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 3: Tech Stack & Tools -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block"></span>
+            Teknologi yang Digunakan
+          </h2>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🔴 Laravel</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">⚡ Livewire / Blade</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🎨 Tailwind CSS</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🐬 MySQL Database</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🐙 Git &amp; GitHub</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🦖 Laragon / Local Server</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">📋 Project Management &amp; Scrum</span>
+          </div>
+        </article>
+
+        <!-- Section 4: Navigasi Proyek Lainnya -->
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a href="alinea.html" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal dark:shadow-brutal-dark">
+            ← Proyek Sebelumnya: Alinea
+          </a>
+          <a href="../index.html#projects" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal dark:shadow-brutal-dark">
+            Kembali ke Daftar Proyek →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink dark:bg-inkDark text-bgCream border-t-2 border-ink dark:border-inkLight pt-12 pb-10 transition-colors mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-medium opacity-80">
+        <p>© 2026 Dewi Chalissa Rania · Teknik Informatika, Politeknik Negeri Malang</p>
+        <a href="../index.html" class="hover:underline font-bold text-accentYellow">Kembali ke Beranda ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
+</body>
+</html>
+
+

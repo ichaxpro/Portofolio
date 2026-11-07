@@ -1,0 +1,64 @@
+/* Custom Styles & Animation for Dewi Chalissa Rania Portfolio */
+@keyframes marqueeSlide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Neo-Brutalist Shadow and Interaction */
+.btn-brutal {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-brutal:hover {
+  transform: translateY(-2px);
+}
+
+.btn-brutal:active {
+  transform: translateY(2px);
+}
+
+/* Blob shape for portrait */
+.blob-shape {
+  border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F1E3;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0E241C;
+}
+::-webkit-scrollbar-thumb {
+  background: #143D2F;
+  border-radius: 5px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2E9D63;
+}

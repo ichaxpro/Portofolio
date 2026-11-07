@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alinea · Detail Proyek | Dewi Chalissa Rania</title>
+  <meta name="description" content="Detail Proyek Alinea - Community Literacy Platform oleh Dewi Chalissa Rania.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgCream: '#F7F1E3',
+            surface: '#FFFFFF',
+            ink: '#143D2F',
+            inkSoft: '#4A6358',
+            inkDark: '#0E241C',
+            surfaceDark: '#16372B',
+            inkLight: '#F7F1E3',
+            inkLightSoft: '#B9C9BF',
+            accentGreen: '#2E9D63',
+            accentPink: '#FF5C8A',
+            accentYellow: '#FFD23F',
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'brutal-sm': '0 2px 0 0 #143D2F',
+            'brutal': '0 4px 0 0 #143D2F',
+            'brutal-lg': '0 6px 0 0 #143D2F',
+            'brutal-xl': '0 10px 0 0 #143D2F',
+            'brutal-dark': '0 4px 0 0 #F7F1E3',
+            'brutal-dark-lg': '0 6px 0 0 #F7F1E3',
+            'brutal-dark-xl': '0 10px 0 0 #F7F1E3',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-bgCream text-ink dark:bg-inkDark dark:text-inkLight font-body text-base md:text-lg leading-relaxed selection:bg-accentPink selection:text-ink transition-colors duration-200">
+
+  <!-- TOP BAR -->
+  <aside aria-label="Pengumuman" class="bg-ink text-bgCream dark:bg-inkDark dark:border-b dark:border-inkLight/20 text-xs sm:text-sm font-medium py-2.5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <a href="../index.html" class="inline-flex items-center gap-2 font-bold hover:text-accentYellow transition-colors">
+        <span>← Kembali ke Portofolio Utama</span>
+      </a>
+      <span class="text-xs opacity-75">Platform Komunitas &amp; Web Development</span>
+    </div>
+  </aside>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-bgCream/95 dark:bg-inkDark/95 backdrop-blur-md border-b-2 border-ink dark:border-inkLight transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="../index.html" class="flex items-center gap-2.5 font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight hover:opacity-90 transition-opacity">
+        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block shadow-sm"></span>
+        <span>Dewi Chalissa</span>
+      </a>
+
+      <!-- Quick Links -->
+      <nav class="hidden md:flex items-center gap-2">
+        <a href="../index.html#about" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">About</a>
+        <a href="../index.html#projects" class="px-3.5 py-1.5 rounded-full font-bold text-sm bg-accentYellow text-ink transition-colors">Projects</a>
+        <a href="../index.html#achievements" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Prestasi</a>
+        <a href="../index.html#skills" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Skills</a>
+        <a href="../index.html#experience" class="px-3.5 py-1.5 rounded-full font-bold text-sm hover:bg-accentYellow hover:text-ink transition-colors">Experience</a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggleBtn" type="button" aria-label="Ganti mode gelap/terang" class="btn-brutal p-2 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal-sm hover:shadow-brutal transition-all">
+          <span class="theme-icon-indicator flex items-center justify-center"></span>
+        </button>
+        <a href="../index.html#projects" class="btn-brutal hidden sm:inline-flex items-center gap-1.5 text-xs font-extrabold uppercase px-4 py-2 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal-sm">
+          Semua Proyek
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN PROJECT DETAIL CONTENT -->
+  <main class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <div class="flex items-center gap-2 text-sm font-bold text-inkSoft dark:text-inkLightSoft mb-8">
+        <a href="../index.html" class="hover:underline">Beranda</a>
+        <span>/</span>
+        <a href="../index.html#projects" class="hover:underline">Proyek</a>
+        <span>/</span>
+        <span class="text-ink dark:text-inkLight font-extrabold">Alinea</span>
+      </div>
+
+      <!-- Project Header Card -->
+      <section class="border-2 border-ink dark:border-inkLight rounded-3xl bg-surface dark:bg-surfaceDark p-6 sm:p-10 shadow-brutal-lg dark:shadow-brutal-dark-lg mb-10">
+        
+        <div class="flex flex-wrap items-center gap-2.5 mb-4">
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-1 font-bold text-xs sm:text-sm bg-accentYellow text-ink shadow-brutal-sm">
+            ⭐ Frontend &amp; Documentation Lead
+          </span>
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1 font-bold text-xs sm:text-sm bg-accentGreen text-bgCream shadow-brutal-sm">
+            Web Application
+          </span>
+          <span class="border-2 border-ink dark:border-inkLight rounded-full px-3.5 py-1 font-bold text-xs sm:text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-brutal-sm">
+            Community Platform
+          </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold uppercase tracking-tight text-ink dark:text-inkLight leading-[1.05]">
+          Alinea
+        </h1>
+        <p class="text-xl sm:text-2xl font-bold text-inkSoft dark:text-inkLightSoft mt-2">
+          Community Literacy Platform
+        </p>
+
+        <!-- Visual Hero Illustration -->
+        <div class="mt-8 rounded-2xl overflow-hidden border-2 border-ink dark:border-inkLight bg-accentYellow aspect-[16/8] relative flex items-center justify-center p-6 shadow-brutal">
+          <video src="../assets/videos/alinea_demo.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline aria-label="Demo platform Alinea"></video>
+          <div class="absolute bottom-4 right-4 bg-bgCream text-ink border-2 border-ink rounded-full px-4 py-1 text-xs font-bold shadow-sm">
+            Antarmuka Chat &amp; Profil Komunitas
+          </div>
+        </div>
+
+        <!-- Links Action Bar -->
+        <div class="mt-6 pt-6 border-t-2 border-ink/10 dark:border-inkLight/10 flex flex-wrap gap-4 items-center justify-between">
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/ichaxpro/Alinea" target="_blank" rel="noopener noreferrer" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal-sm">
+              <span>Repository GitHub ↗</span>
+            </a>
+            <button type="button" id="hakiBtn" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-full border-2 border-ink dark:border-inkLight bg-accentYellow text-ink shadow-brutal-sm" aria-haspopup="dialog" aria-controls="hakiModal">
+              <span>Sertifikat HAKI</span>
+            </button>
+          </div>
+          <div class="text-xs font-bold text-inkSoft dark:text-inkLightSoft">
+            Pengembangan Komunitas Literasi
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Project Details Grid -->
+      <div class="space-y-8">
+        
+        <!-- Section 1: Ringkasan Platform -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentPink border-2 border-ink dark:border-inkLight inline-block"></span>
+            Tentang Platform Alinea
+          </h2>
+          <p class="text-inkSoft dark:text-inkLightSoft text-base sm:text-lg leading-relaxed mb-4">
+            <strong>Alinea</strong> dibangun sebagai wadah digital inklusif bagi pegiat literasi, komunitas membaca, dan penulis independen untuk saling terhubung. Platform ini memfasilitasi pertukaran ulasan buku, publikasi karya tulisan pendek, serta ruang obrolan langsung antar anggota komunitas buku.
+          </p>
+          <p class="text-inkSoft dark:text-inkLightSoft text-base sm:text-lg leading-relaxed">
+            Fokus utama proyek ini adalah menghadirkan pengalaman pengguna yang ramah, hangat, dan nyaman bagi pengguna non-teknis, didukung oleh dokumentasi sistem yang terstruktur rapi untuk mempermudah pengembangan jangka panjang.
+          </p>
+        </article>
+
+        <!-- Section 2: Kontribusi Utama -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentYellow border-2 border-ink dark:border-inkLight inline-block"></span>
+            Peran &amp; Kontribusi Utama
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">💬</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">Fitur Interactive Chat</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Mengembangkan komponen UI chat interaktif yang responsif, visual pesan bubble yang nyaman dibaca, serta status aktivitas pengguna.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">👤</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">Halaman Profil Pengguna</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Merancang antarmuka profil dengan daftar bacaan (reading list), biografi singkat, badge kontribusi komunitas, dan pengaturan preferensi akun.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">📐</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">System Activity Diagram</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Merancang alur diagram aktivitas sistem dari registrasi pengguna, moderasi pesan, hingga interaksi postingan resensi buku.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl border-2 border-ink dark:border-inkLight bg-bgCream dark:bg-inkDark">
+              <span class="text-2xl mb-2 block">📖</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-inkLight">User Manual Komunitas</h3>
+              <p class="text-sm text-inkSoft dark:text-inkLightSoft mt-1">
+                Menyusun buku panduan pengguna (User Guidebook) dengan panduan visual langkah demi langkah agar anggota komunitas mudah beradaptasi.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 3: Tech Stack & Tools -->
+        <article class="border-2 border-ink dark:border-inkLight rounded-2xl bg-surface dark:bg-surfaceDark p-6 sm:p-8 shadow-brutal dark:shadow-brutal-dark">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-ink dark:text-inkLight mb-4 flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-accentGreen border-2 border-ink dark:border-inkLight inline-block"></span>
+            Teknologi yang Digunakan
+          </h2>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🌐 HTML5</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🎨 Tailwind CSS</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">⚡ JavaScript (ES6+)</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">📐 Figma UI/UX</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">🐙 Git &amp; GitHub</span>
+            <span class="border-2 border-ink dark:border-inkLight rounded-full px-4 py-2 font-bold text-sm bg-bgCream dark:bg-inkDark text-ink dark:text-inkLight shadow-sm">📝 Technical Documentation</span>
+          </div>
+        </article>
+
+        <!-- Section 4: Navigasi Proyek Lainnya -->
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a href="robosarema.html" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full border-2 border-ink dark:border-inkLight bg-surface dark:bg-surfaceDark text-ink dark:text-inkLight shadow-brutal dark:shadow-brutal-dark">
+            ← Proyek Sebelumnya: Robosarema SAR Robot
+          </a>
+          <a href="lab-dt.html" class="btn-brutal inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full border-2 border-ink dark:border-inkLight bg-accentPink text-ink shadow-brutal dark:shadow-brutal-dark">
+            Proyek Berikutnya: Website Profil LAB DT →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- HAKI Certificate Modal -->
+  <div id="hakiModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-ink/80 p-4 sm:p-8" role="dialog" aria-modal="true" aria-labelledby="hakiModalTitle">
+    <div class="relative max-h-full w-full max-w-5xl overflow-y-auto rounded-2xl border-2 border-inkLight bg-bgCream p-4 shadow-brutal-dark-lg dark:bg-inkDark sm:p-6" role="document">
+      <button type="button" id="hakiCloseBtn" class="absolute right-3 top-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-ink bg-accentPink text-xl font-extrabold leading-none text-ink shadow-brutal-sm hover:bg-accentYellow" aria-label="Tutup sertifikat HAKI">
+        &times;
+      </button>
+      <h2 id="hakiModalTitle" class="mb-5 pr-12 text-2xl font-display font-extrabold uppercase text-ink dark:text-inkLight">
+        Sertifikat HAKI
+      </h2>
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <figure class="rounded-xl border-2 border-ink bg-surface p-2 shadow-brutal dark:border-inkLight dark:bg-surfaceDark">
+          <img src="../assets/images/sertifikat_EC002026104152_page-0001.jpg" alt="Sertifikat HAKI halaman 01" class="h-auto max-h-[70vh] w-full object-contain">
+          <figcaption class="pt-2 text-center text-sm font-bold text-ink dark:text-inkLight">Halaman 01</figcaption>
+        </figure>
+        <figure class="rounded-xl border-2 border-ink bg-surface p-2 shadow-brutal dark:border-inkLight dark:bg-surfaceDark">
+          <img src="../assets/images/sertifikat_EC002026104152_page-0002.jpg" alt="Sertifikat HAKI halaman 02" class="h-auto max-h-[70vh] w-full object-contain">
+          <figcaption class="pt-2 text-center text-sm font-bold text-ink dark:text-inkLight">Halaman 02</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink dark:bg-inkDark text-bgCream border-t-2 border-ink dark:border-inkLight pt-12 pb-10 transition-colors mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-medium opacity-80">
+        <p>© 2026 Dewi Chalissa Rania · Teknik Informatika, Politeknik Negeri Malang</p>
+        <a href="../index.html" class="hover:underline font-bold text-accentYellow">Kembali ke Beranda ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
+  <script>
+    const hakiBtn = document.getElementById('hakiBtn');
+    const hakiModal = document.getElementById('hakiModal');
+    const hakiCloseBtn = document.getElementById('hakiCloseBtn');
+
+    function openHakiModal() {
+      hakiModal.classList.remove('hidden');
+      hakiModal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+      hakiCloseBtn.focus();
+    }
+
+    function closeHakiModal() {
+      hakiModal.classList.add('hidden');
+      hakiModal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      hakiBtn.focus();
+    }
+
+    hakiBtn.addEventListener('click', openHakiModal);
+    hakiCloseBtn.addEventListener('click', closeHakiModal);
+    hakiModal.addEventListener('click', (event) => {
+      if (event.target === hakiModal) {
+        closeHakiModal();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !hakiModal.classList.contains('hidden')) {
+        closeHakiModal();
+      }
+    });
+  </script>
+</body>
+</html>
+
+
